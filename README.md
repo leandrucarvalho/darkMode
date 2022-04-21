@@ -13,5 +13,7 @@ Projeto criando para praticar as aulas do curso da DIO "Manipulando a D.O.M. com
 
 ## Demonstração
 
+![darkMode](https://user-images.githubusercontent.com/56963289/164345093-28f7fd46-2232-4ec6-b2a2-6f13cf9fb867.gif)
+
 
 
