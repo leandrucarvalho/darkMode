@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+body {
+	background-color: #e5e8e8;
+	color: #4e545c;
+	margin: 0;
+	font-family: 'Quicksand';
+}
+
+body.dark-mode {
+	background-color: #000401;
+	color: #e5e8e8;
+}
+
+/* header  */
+
+/* From cssbuttons.io by @addy123d */
+.card{
+   width: 190px;
+   height: 254px;
+   border-radius: 10px;
+   background: #f1f5f3;
+   box-shadow: 1px 5px 60px 0px #4646466b;
+   padding-bottom: 10px;
+  }
+  
+  .card .picture,.card .name,.card .jobtitle,.card .btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  
+  .card .picture {
+   border: 2px solid #4646466b;
+   height: 100px;
+   width: 100px;
+   border-radius: 100%;
+   margin: auto;
+   margin-top: 15px;
+   cursor: pointer;
+   transition: all .3s;
+  }
+  
+  .card .picture p {
+   font-size: .8em;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .btn > div {
+   padding: 2px;
+  }
+  
+   .btn {
+   padding: 2px;
+   outline: none;
+   background: transparent;
+   /* border: 1px solid #0f0f0f6b; */
+   border-radius: .4em;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   transition: all .3s;
+   font-size: .7em;
+  }
+  
+  .card .picture:hover,.btn1:hover, .btn2:hover {
+   background: #252525;
+   color: #f1f5f3;
+  }
+  
+  .card .name p {
+   margin-top: 8%;
+   margin-bottom: 5%;
+   font-size: 1em;
+   font-weight: bold;
+  }
+  
+  .card .jobtitle p {
+   margin-bottom: 10%;
+   font-size: .54em;
+   text-transform: uppercase;
+   letter-spacing: .5em;
+   font-weight: bold;
+  }
+  
+
+main {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer {
+	width: 100%;
+	background-color: #4e545c;
+	padding: 16px;
+	color: #e5e8e8;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	font-weight: 400;
+}
+
+footer.dark-mode {
+	background-color: #8d9797;
+	color: #000401;
+}
+
+/* From cssbuttons.io by @EmmaxPlay */
+#mode-selector {
+    padding: 0.9em 1.6em;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+   }
+
+   .dark {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+   }
+   
+   #mode-selector::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(46, 46, 46);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+   }
+
+   /* glow */
+   #mode-selector::before {
+    content: "";
+    background: linear-gradient(
+       45deg,
+       #FF0000, #002BFF, #FF00C8, #002BFF,
+         #FF0000, #002BFF, #FF00C8, #002BFF
+   );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+   }
+   
+   @keyframes glowing {
+    0% {
+     background-position: 0 0;
+    }
+   
+    50% {
+     background-position: 400% 0;
+    }
+   
+    100% {
+     background-position: 0 0;
+    }
+   }
+   
+   /* hover */
+   #mode-selector:hover::before {
+    opacity: 1;
+   }
+   
+   #mode-selector:active:after {
+    background: transparent;
+   }
+   
+   #mode-selector:active {
+    color: #000;
+    font-weight: bold;
+   }
+
+   #mode-selector .card .dark-mode {
+	background-color: #e5e8e8;
+	color: #4e545c;
+}
+
+#mode-selector .card .dark-mode:hover {
+	background-color: #4e545c;
+	color: #e5e8e8;
+}
